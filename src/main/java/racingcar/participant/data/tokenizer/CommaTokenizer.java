@@ -1,9 +1,8 @@
-package racingcar.participant.tokenizer;
+package racingcar.participant.data.tokenizer;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-import racingcar.participant.tokenizer.Tokenizer;
 
 public abstract class CommaTokenizer implements Tokenizer {
     private static final String COMMA = ",";

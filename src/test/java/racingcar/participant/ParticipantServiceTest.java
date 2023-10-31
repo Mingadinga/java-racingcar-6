@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
-import racingcar.participant.data.ParticipantSaveRequestDto;
+import racingcar.participant.data.dto.ParticipantSaveRequestDto;
 import racingcar.participant.domain.Participant;
 import racingcar.participant.repository.ParticipantRepository;
 import racingcar.participant.repository.ParticipantRepositoryByMap;

@@ -3,9 +3,9 @@ package racingcar.participant;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import racingcar.participant.data.ParticipantSaveRequestDto;
-import racingcar.participant.data.ParticipantSaveRequestDtoResolver;
-import racingcar.participant.data.ParticipantSaveRequestDtoResolverByName;
+import racingcar.participant.data.dto.ParticipantSaveRequestDto;
+import racingcar.participant.data.dto.ParticipantSaveRequestDtoResolver;
+import racingcar.participant.data.dto.ParticipantSaveRequestDtoResolverByName;
 
 class ParticipantSaveRequestDtoResolverTest {
 
@@ -16,5 +16,5 @@ class ParticipantSaveRequestDtoResolverTest {
         ParticipantSaveRequestDto tobyRequestDto = resolver.resolve("toby");
         assertEquals(tobyRequestDto.getName(), "toby");
     }
-    
+
 }

@@ -1,4 +1,4 @@
-package racingcar.participant.data;
+package racingcar.participant.data.dto;
 
 import racingcar.participant.domain.Participant;
 

@@ -1,7 +1,7 @@
 package racingcar.participant.service;
 
 import java.util.List;
-import racingcar.participant.data.ParticipantSaveRequestDto;
+import racingcar.participant.data.dto.ParticipantSaveRequestDto;
 import racingcar.participant.repository.ParticipantRepository;
 
 public class ParticipantServiceImpl implements ParticipantService {

@@ -1,4 +1,4 @@
-package racingcar.participant.tokenizer;
+package racingcar.participant.data.tokenizer;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

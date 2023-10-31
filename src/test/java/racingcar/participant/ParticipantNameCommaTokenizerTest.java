@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import racingcar.participant.tokenizer.ParticipantNameCommaTokenizer;
-import racingcar.participant.tokenizer.Tokenizer;
+import racingcar.participant.data.tokenizer.ParticipantNameCommaTokenizer;
+import racingcar.participant.data.tokenizer.Tokenizer;
 
 public class ParticipantNameCommaTokenizerTest {
     Tokenizer commaTokenizer = new ParticipantNameCommaTokenizer();
