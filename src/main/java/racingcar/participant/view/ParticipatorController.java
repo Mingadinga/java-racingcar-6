@@ -1,6 +1,5 @@
-package racingcar.participant.data.io;
+package racingcar.participant.view;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import racingcar.participant.data.dto.ParticipantSaveRequestDto;

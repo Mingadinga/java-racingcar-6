@@ -1,4 +1,4 @@
-package racingcar.participant.data.io;
+package racingcar.participant.view;
 
 import racingcar.view.ConsoleInputComponent;
 
