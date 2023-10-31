@@ -2,6 +2,7 @@ package racingcar.participant;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class ParticipantRepositoryByMap implements ParticipantRepository {
 
@@ -13,8 +14,8 @@ public class ParticipantRepositoryByMap implements ParticipantRepository {
     }
 
     @Override
-    public Participant find(Long id) {
-        return repository.get(id);
+    public Optional<Participant> find(Long id) {
+        return Optional.ofNullable(repository.get(id));
     }
 
 }

@@ -1,6 +1,8 @@
 package racingcar.participant;
 
+import java.util.Optional;
+
 public interface ParticipantRepository {
     void save(Participant participant);
-    Participant find(Long id);
+    Optional<Participant> find(Long id);
 }
