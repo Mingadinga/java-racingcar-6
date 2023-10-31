@@ -1,10 +1,13 @@
 package racingcar.participant.data.io;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import racingcar.participant.data.dto.ParticipantSaveRequestDto;
 import racingcar.participant.data.dto.ParticipantSaveRequestDtoResolver;
 import racingcar.participant.data.dto.ParticipantSaveRequestDtoResolverByName;
+import racingcar.participant.data.tokenizer.NameLengthValidator;
+import racingcar.participant.data.tokenizer.NameRegexValidation;
 import racingcar.participant.data.tokenizer.ParticipantNameCommaTokenizer;
 import racingcar.participant.data.tokenizer.Tokenizer;
 import racingcar.participant.repository.ParticipantRepository;
@@ -22,7 +25,7 @@ public class ParticipatorController {
 
         outputComponent.print();
         String inputInformation = inputComponent.input();
-        Tokenizer tokenizer = new ParticipantNameCommaTokenizer();
+        Tokenizer tokenizer = new ParticipantNameCommaTokenizer(List.of(new NameLengthValidator(), new NameRegexValidation()));
         List<String> informationList = tokenizer.tokenize(inputInformation);
 
         ParticipantSaveRequestDtoResolver resolver = new ParticipantSaveRequestDtoResolverByName();

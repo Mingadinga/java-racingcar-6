@@ -5,30 +5,32 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
+import racingcar.participant.data.tokenizer.NameLengthValidator;
+import racingcar.participant.data.tokenizer.NameRegexValidation;
 import racingcar.participant.data.tokenizer.ParticipantNameCommaTokenizer;
 import racingcar.participant.data.tokenizer.Tokenizer;
 
 public class ParticipantNameCommaTokenizerTest {
-    Tokenizer commaTokenizer = new ParticipantNameCommaTokenizer();
+    Tokenizer commaTokenizer = new ParticipantNameCommaTokenizer(List.of(new NameLengthValidator(), new NameRegexValidation()));
 
     @Test
     public void 토큰_여러개_입력() {
-        String input = "apple,banana,cherry";
+        String input = "pobi,woni,jun";
         List<String> tokens = commaTokenizer.tokenize(input);
         assertEquals(3, tokens.size());
-        assertEquals("apple", tokens.get(0));
-        assertEquals("banana", tokens.get(1));
-        assertEquals("cherry", tokens.get(2));
+        assertEquals("pobi", tokens.get(0));
+        assertEquals("woni", tokens.get(1));
+        assertEquals("jun", tokens.get(2));
     }
 
     @Test
     public void 토큰_여러개_입력시_공백_포함_가능() {
-        String input = "apple, banana, cherry";
+        String input = "pobi, woni, jun";
         List<String> tokens = commaTokenizer.tokenize(input);
         assertEquals(3, tokens.size());
-        assertEquals("apple", tokens.get(0));
-        assertEquals("banana", tokens.get(1));
-        assertEquals("cherry", tokens.get(2));
+        assertEquals("pobi", tokens.get(0));
+        assertEquals("woni", tokens.get(1));
+        assertEquals("jun", tokens.get(2));
     }
 
     @Test
@@ -48,7 +50,7 @@ public class ParticipantNameCommaTokenizerTest {
 
     @Test
     public void testTokenizeWithException() {
-        String input = "apple;banana;cherry";
+        String input = "pobi;woni;jun";
         assertThrows(IllegalArgumentException.class, () -> commaTokenizer.tokenize(input));
     }
 }
