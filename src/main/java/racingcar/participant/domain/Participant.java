@@ -1,4 +1,4 @@
-package racingcar.participant;
+package racingcar.participant.domain;
 
 public class Participant {
     private final Long id;

@@ -1,4 +1,6 @@
-package racingcar.participant;
+package racingcar.participant.data;
+
+import racingcar.participant.domain.Participant;
 
 public class ParticipantSaveRequestDto {
     private final String name;

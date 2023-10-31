@@ -1,4 +1,4 @@
-package racingcar.participant;
+package racingcar.participant.domain;
 
 import java.util.concurrent.atomic.AtomicLong;
 

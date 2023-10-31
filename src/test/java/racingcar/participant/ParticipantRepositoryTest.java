@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
+import racingcar.participant.domain.Participant;
+import racingcar.participant.repository.ParticipantRepository;
+import racingcar.participant.repository.ParticipantRepositoryByMap;
 
 class ParticipantRepositoryTest {
 

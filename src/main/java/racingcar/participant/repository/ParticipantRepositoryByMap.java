@@ -1,8 +1,9 @@
-package racingcar.participant;
+package racingcar.participant.repository;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import racingcar.participant.domain.Participant;
 
 public class ParticipantRepositoryByMap implements ParticipantRepository {
 
