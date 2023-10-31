@@ -5,8 +5,8 @@ public class Participant {
     private final String name;
 
 
-    public Participant(Long id, String name) {
-        this.id = id;
+    public Participant(String name) {
+        this.id = ParticipantSequence.INSTANCE.getNext();
         this.name = name;
     }
 

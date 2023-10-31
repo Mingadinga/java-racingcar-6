@@ -8,7 +8,6 @@ public class ParticipantSaveRequestDto {
     }
 
     public Participant of() {
-        // todo : sequence 객체 필요
-        return new Participant(1L, name);
+        return new Participant(name);
     }
 }

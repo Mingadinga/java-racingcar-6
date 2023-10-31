@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ParticipantRepositoryByMap implements ParticipantRepository {
 
-    Map<Long, Participant> repository = new HashMap();
+    Map<Long, Participant> repository = new HashMap<>();
 
     @Override
     public void save(Participant participant) {
