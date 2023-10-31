@@ -18,4 +18,9 @@ public class ParticipantRepositoryByMap implements ParticipantRepository {
         return Optional.ofNullable(repository.get(id));
     }
 
+    @Override
+    public Optional<Participant> findByName(String name) {
+        return repository.values().stream().filter(participant -> participant.getName().contentEquals(name)).findFirst();
+    }
+
 }
