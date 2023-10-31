@@ -12,4 +12,8 @@ public class ParticipantSaveRequestDto {
     public Participant of() {
         return new Participant(name);
     }
+
+    public String getName() {
+        return name;
+    }
 }
