@@ -49,8 +49,10 @@ public class ParticipantNameCommaTokenizerTest {
     }
 
     @Test
-    public void testTokenizeWithException() {
+    public void 쉼표_외에_다른_구분자_사용시_실패() {
         String input = "pobi;woni;jun";
         assertThrows(IllegalArgumentException.class, () -> commaTokenizer.tokenize(input));
     }
+
+
 }
