@@ -8,19 +8,19 @@ import racingcar.participant.data.tokenizer.ParticipantNameCommaTokenizer;
 import racingcar.participant.repository.ParticipantRepositoryByMap;
 import racingcar.participant.service.ParticipantServiceImpl;
 import racingcar.participant.view.OutputComponentBeforeInputParticipatorInfo;
-import racingcar.participant.view.ParticipatorNameInputComponent;
+import racingcar.participant.view.ParticipantNameInputComponent;
 
-public class DefaultParticipatorControllerFactory implements ParticipatorControllerFactory {
+public class DefaultParticipantControllerFactory implements ParticipantControllerFactory {
 
     @Override
-    public ParticipatorController get() {
-        return new ParticipatorControllerImpl(
+    public ParticipantController get() {
+        return new ParticipantControllerImpl(
                 new OutputComponentBeforeInputParticipatorInfo(),
-                new ParticipatorNameInputComponent(),
+                new ParticipantNameInputComponent(),
                 new ParticipantNameCommaTokenizer(List.of(new NameLengthValidator(), new NameRegexValidation())),
                 new ParticipantSaveRequestDtoResolverByName(),
                 new ParticipantServiceImpl(new ParticipantRepositoryByMap())
         );
     }
-    
+
 }

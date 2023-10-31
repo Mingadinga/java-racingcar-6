@@ -1,5 +1,5 @@
 package racingcar.participant.controller;
 
-public interface ParticipatorController {
+public interface ParticipantController {
     void save();
 }

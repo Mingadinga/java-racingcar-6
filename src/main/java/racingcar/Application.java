@@ -1,10 +1,10 @@
 package racingcar;
 
-import racingcar.participant.controller.DefaultParticipatorControllerFactory;
-import racingcar.participant.controller.ParticipatorControllerFactory;
+import racingcar.participant.controller.DefaultParticipantControllerFactory;
+import racingcar.participant.controller.ParticipantControllerFactory;
 
 public class Application {
-    private final static ParticipatorControllerFactory participatorControllerFactory = new DefaultParticipatorControllerFactory();
+    private final static ParticipantControllerFactory participatorControllerFactory = new DefaultParticipantControllerFactory();
     public static void main(String[] args) {
        participatorControllerFactory.get().save();
 

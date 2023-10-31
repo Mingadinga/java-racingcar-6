@@ -9,7 +9,7 @@ import racingcar.participant.service.ParticipantService;
 import racingcar.view.InputComponent;
 import racingcar.view.OutputComponent;
 
-public class ParticipatorControllerImpl implements ParticipatorController {
+public class ParticipantControllerImpl implements ParticipantController {
 
     private final OutputComponent outputComponent;
     private final InputComponent inputComponent;
@@ -17,9 +17,9 @@ public class ParticipatorControllerImpl implements ParticipatorController {
     private final ParticipantSaveRequestDtoResolver resolver;
     private final ParticipantService participantService;
 
-    public ParticipatorControllerImpl(OutputComponent outputComponent, InputComponent inputComponent,
-                                      Tokenizer tokenizer, ParticipantSaveRequestDtoResolver resolver,
-                                      ParticipantService participantService) {
+    public ParticipantControllerImpl(OutputComponent outputComponent, InputComponent inputComponent,
+                                     Tokenizer tokenizer, ParticipantSaveRequestDtoResolver resolver,
+                                     ParticipantService participantService) {
         this.outputComponent = outputComponent;
         this.inputComponent = inputComponent;
         this.tokenizer = tokenizer;
