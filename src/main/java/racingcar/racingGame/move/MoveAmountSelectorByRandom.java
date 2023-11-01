@@ -1,4 +1,4 @@
-package racingcar.racingGame.gameFlow.service.move;
+package racingcar.racingGame.move;
 
 public class MoveAmountSelectorByRandom implements MoveAmountSelector {
 

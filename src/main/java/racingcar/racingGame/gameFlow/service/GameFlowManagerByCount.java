@@ -2,7 +2,7 @@ package racingcar.racingGame.gameFlow.service;
 
 import java.util.Map;
 import racingcar.racingGame.gameFlow.domain.RangedNumber;
-import racingcar.racingGame.gameFlow.service.move.MoveManager;
+import racingcar.racingGame.move.MoveManager;
 
 public class GameFlowManagerByCount implements GameFlowManager {
 

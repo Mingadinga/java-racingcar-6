@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.Map;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
-import racingcar.racingGame.gameFlow.service.move.MoveAmountSelectorByRandom;
-import racingcar.racingGame.gameFlow.service.move.MoveMangerImpl;
+import racingcar.racingGame.move.MoveAmountSelectorByRandom;
+import racingcar.racingGame.move.MoveMangerImpl;
 
 public class MoveManagerTest {
 

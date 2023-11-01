@@ -10,8 +10,8 @@ import racingcar.racingGame.gameFlow.domain.Range;
 import racingcar.racingGame.gameFlow.domain.RangedNumber;
 import racingcar.racingGame.gameFlow.service.GameFlowManager;
 import racingcar.racingGame.gameFlow.service.GameFlowManagerByCount;
-import racingcar.racingGame.gameFlow.service.move.DefaultMoveManagerFactory;
-import racingcar.racingGame.gameFlow.service.move.MoveManager;
+import racingcar.racingGame.move.DefaultMoveManagerFactory;
+import racingcar.racingGame.move.MoveManager;
 
 class GameFlowManagerByCountTest {
 

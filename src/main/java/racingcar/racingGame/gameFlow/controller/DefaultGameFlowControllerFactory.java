@@ -1,8 +1,8 @@
 package racingcar.racingGame.gameFlow.controller;
 
 import racingcar.participant.controller.ParticipantController;
-import racingcar.racingGame.gameFlow.service.move.DefaultMoveManagerFactory;
-import racingcar.racingGame.gameFlow.service.move.MoveManagerFactory;
+import racingcar.racingGame.move.DefaultMoveManagerFactory;
+import racingcar.racingGame.move.MoveManagerFactory;
 import racingcar.racingGame.gameFlow.view.GameCountInputComponent;
 import racingcar.racingGame.gameFlow.view.OutputComponentBeforeInputGameCount;
 

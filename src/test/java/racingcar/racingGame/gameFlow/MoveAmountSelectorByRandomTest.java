@@ -3,7 +3,7 @@ package racingcar.racingGame.gameFlow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-import racingcar.racingGame.gameFlow.service.move.MoveAmountSelectorByRandom;
+import racingcar.racingGame.move.MoveAmountSelectorByRandom;
 
 public class MoveAmountSelectorByRandomTest {
     private static final Long USER_ID = 1L;

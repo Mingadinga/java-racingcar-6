@@ -1,4 +1,4 @@
-package racingcar.racingGame.gameFlow.service.move;
+package racingcar.racingGame.move;
 
 import racingcar.participant.controller.ParticipantController;
 

@@ -1,4 +1,4 @@
-package racingcar.racingGame.gameFlow.service.move;
+package racingcar.racingGame.move;
 
 public interface MoveAmountSelector {
     int select(Long id);
