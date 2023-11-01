@@ -1,6 +1,7 @@
 package racingcar.participant.controller;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import racingcar.participant.data.dto.ParticipantSaveRequestDto;
 import racingcar.participant.data.dto.ParticipantSaveRequestDtoResolver;
@@ -32,6 +33,11 @@ public class ParticipantControllerImpl implements ParticipantController {
         String inputInformation = interactWithViewAndGetInput();
         List<String> tokenList = tokenizer.tokenize(inputInformation);
         participantService.register(mapInputTokenListToRequestDto(tokenList));
+    }
+
+    @Override
+    public Set<Long> getParticipants() {
+        return participantService.getParticipants().keySet();
     }
 
     private String interactWithViewAndGetInput() {

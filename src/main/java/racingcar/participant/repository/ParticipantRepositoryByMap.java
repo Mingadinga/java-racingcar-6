@@ -24,4 +24,9 @@ public class ParticipantRepositoryByMap implements ParticipantRepository {
         return repository.values().stream().filter(participant -> participant.getName().contentEquals(name)).findFirst();
     }
 
+    @Override
+    public Map<Long, Participant> findAll() {
+        return repository;
+    }
+
 }

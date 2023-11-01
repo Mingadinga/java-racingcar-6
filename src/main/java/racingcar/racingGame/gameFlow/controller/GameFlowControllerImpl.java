@@ -1,6 +1,6 @@
 package racingcar.racingGame.gameFlow.controller;
 
-import racingcar.participant.domain.Participant;
+import racingcar.participant.controller.ParticipantController;
 import racingcar.racingGame.gameFlow.domain.Range;
 import racingcar.racingGame.gameFlow.domain.RangedNumber;
 import racingcar.racingGame.gameFlow.service.GameFlowManager;
@@ -14,14 +14,16 @@ public class GameFlowControllerImpl implements GameFlowController {
     private final OutputComponent outputComponent;
     private final InputComponent inputComponent;
     private final MoveManager moveManager;
+    private final ParticipantController participantController;
     private GameFlowManager gameFlowManager;
     private Range range = new Range(1, 10);
 
     public GameFlowControllerImpl(OutputComponent outputComponent, InputComponent inputComponent,
-                                  MoveManager moveManager) {
+                                  MoveManager moveManager, ParticipantController participantController) {
         this.outputComponent = outputComponent;
         this.inputComponent = inputComponent;
         this.moveManager = moveManager;
+        this.participantController = participantController;
     }
 
     @Override

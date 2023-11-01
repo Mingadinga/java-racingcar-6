@@ -14,7 +14,7 @@ public class MoveManagerTest {
 
     @Test
     public void 한번_이동후_결과를_Map으로_반환() {
-        MoveMangerImpl movingManager = new MoveMangerImpl(new MoveAmountSelectorByRandom(() -> 5));
+        MoveMangerImpl movingManager = new MoveMangerImpl(new MoveAmountSelectorByRandom(() -> 5), Set.of(1L, 2L, 3L));
         movingManager.setMoveParticipantSet(Set.of(1L, 2L, 3L));
 
         Map<Long, Integer> result = movingManager.move();

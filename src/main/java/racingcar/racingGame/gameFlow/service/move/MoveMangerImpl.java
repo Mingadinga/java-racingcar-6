@@ -6,11 +6,12 @@ import java.util.Set;
 
 public class MoveMangerImpl implements MoveManager {
 
-    Set<Long> moveParticipantSet = Set.of(1L, 2L, 3L); // todo : participant controller에서 조회
+    Set<Long> moveParticipantSet;
     private final MoveAmountSelector moveAmountSelector;
 
-    public MoveMangerImpl(MoveAmountSelector moveAmountSelector) {
+    public MoveMangerImpl(MoveAmountSelector moveAmountSelector, Set<Long> moveParticipantSet) {
         this.moveAmountSelector = moveAmountSelector;
+        this.moveParticipantSet = moveParticipantSet;
     }
 
     @Override

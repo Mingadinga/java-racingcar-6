@@ -1,5 +1,6 @@
 package racingcar.racingGame.gameFlow.controller;
 
+import racingcar.participant.controller.ParticipantController;
 import racingcar.racingGame.gameFlow.service.move.DefaultMoveManagerFactory;
 import racingcar.racingGame.gameFlow.service.move.MoveManagerFactory;
 import racingcar.racingGame.gameFlow.view.GameCountInputComponent;
@@ -7,17 +8,22 @@ import racingcar.racingGame.gameFlow.view.OutputComponentBeforeInputGameCount;
 
 public class DefaultGameFlowControllerFactory implements GameFlowControllerFactory {
 
-    private static MoveManagerFactory moveManagerFactory = new DefaultMoveManagerFactory();
+    private final ParticipantController participantController;
+    private final MoveManagerFactory moveManagerFactory;
 
-    private final static GameFlowController INSTANCE = new GameFlowControllerImpl(
-            new OutputComponentBeforeInputGameCount(),
-            new GameCountInputComponent(),
-            moveManagerFactory.get()
-    );
+    public DefaultGameFlowControllerFactory(ParticipantController participantController) {
+        this.participantController = participantController;
+        this.moveManagerFactory = new DefaultMoveManagerFactory(participantController);
+    }
+
 
     @Override
     public GameFlowController get() {
-        return INSTANCE;
+        return new GameFlowControllerImpl(
+                new OutputComponentBeforeInputGameCount(),
+                new GameCountInputComponent(),
+                moveManagerFactory.get(),
+                participantController);
     }
 
 }

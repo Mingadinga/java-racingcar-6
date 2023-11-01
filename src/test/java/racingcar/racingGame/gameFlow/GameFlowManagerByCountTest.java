@@ -2,8 +2,10 @@ package racingcar.racingGame.gameFlow;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import racingcar.participant.controller.ParticipantController;
 import racingcar.racingGame.gameFlow.domain.Range;
 import racingcar.racingGame.gameFlow.domain.RangedNumber;
 import racingcar.racingGame.gameFlow.service.GameFlowManager;
@@ -23,7 +25,17 @@ class GameFlowManagerByCountTest {
         range = new Range(0, 5);
         VALID_GAME_COUNT = range.of(5);
         UNABLE_TO_CONTINUE_GAME_COUNT = range.of(0);
-        moveManager = new DefaultMoveManagerFactory().get();
+        moveManager = new DefaultMoveManagerFactory(new ParticipantController() {
+            @Override
+            public void save() {
+
+            }
+
+            @Override
+            public Set<Long> getParticipants() {
+                return Set.of(1L, 2L, 3L);
+            }
+        }).get();
     }
 
 
