@@ -1,10 +1,11 @@
 package racingcar.racingGame.gameFlow.controller;
 
+import racingcar.participant.domain.Participant;
 import racingcar.racingGame.gameFlow.domain.Range;
 import racingcar.racingGame.gameFlow.domain.RangedNumber;
 import racingcar.racingGame.gameFlow.service.GameFlowManager;
 import racingcar.racingGame.gameFlow.service.GameFlowManagerByCount;
-import racingcar.racingGame.gameFlow.service.MoveManager;
+import racingcar.racingGame.gameFlow.service.move.MoveManager;
 import racingcar.view.InputComponent;
 import racingcar.view.OutputComponent;
 

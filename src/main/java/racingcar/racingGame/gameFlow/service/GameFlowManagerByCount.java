@@ -1,6 +1,8 @@
 package racingcar.racingGame.gameFlow.service;
 
+import java.util.Map;
 import racingcar.racingGame.gameFlow.domain.RangedNumber;
+import racingcar.racingGame.gameFlow.service.move.MoveManager;
 
 public class GameFlowManagerByCount implements GameFlowManager {
 
@@ -20,7 +22,8 @@ public class GameFlowManagerByCount implements GameFlowManager {
     @Override
     public void doContinue() {
         if (!isContinuable()) throw new IllegalStateException("플레이 가능한 횟수가 모두 소진되었습니다.");
-        moveManager.move();
+        Map<Long, Integer> moveResult = moveManager.move();
+        // result 나중에 저장
         count.minus();
     }
 
