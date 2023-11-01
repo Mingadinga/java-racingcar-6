@@ -8,7 +8,6 @@ public abstract class ConsoleInputComponent implements InputComponent {
     public String input() {
         String input = Console.readLine();
         validate(input);
-        Console.close();
         return input;
     }
 
